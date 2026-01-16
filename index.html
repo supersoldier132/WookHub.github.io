@@ -1,12 +1,5 @@
-<!document html>
-<html>
-<head>
-<meta charset="utf-8">
-<title>포도빛</title>
-</head>
+let server = require('./server');
+let router = require('./router');
+let requestHandler = require('./requestHandler');
 
-<body>
-<h1>포도빛의 Github Page 연습</h1>
-<p>잘 나온다!</p>
-</body>
-</html>
+server.start(router.route, requestHandler.handle);
